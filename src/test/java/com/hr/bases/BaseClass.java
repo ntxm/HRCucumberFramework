@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.hr.utils.Constants;
+import com.hr.utils.FileReader;
 
 public class BaseClass {
 
@@ -15,7 +16,9 @@ public static WebDriver driver;
 	
 	public static void setUp() {
 		
-		switch(Constants.BROWSER.toLowerCase()) {
+		FileReader.readFileProperties(Constants.CONFIG_FILEPATH);
+		
+		switch(FileReader.getProperty("browser").toLowerCase()) {
 			
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER);
@@ -36,7 +39,7 @@ public static WebDriver driver;
 		driver.manage().timeouts().pageLoadTimeout(Constants.PAGE_LOAD_TIME, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
-		driver.get(Constants.MAIN_URL);
+		driver.get(FileReader.getProperty("url"));
 		
 	}
 	

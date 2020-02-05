@@ -2,15 +2,7 @@ package com.hr.utils;
 
 public class Constants {
 	
-	public static final String CONFIG_FILEPATH = "(user.dir)" + "/configs/config.properties";
-	
-	public static final String MAIN_URL = "http://166.62.36.207/Syntax_HRM/symfony/web/index.php/auth/login";
-	
-	public static final String LOGIN =  "Admin";
-	
-	public static final String PASSWORD = "Syntax@123";
-	
-	public static final String BROWSER = "firefox";
+	public static final String CONFIG_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/configs/Config.properties";
 	
 	public static final String CHROME_DRIVER = System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver";
 	
