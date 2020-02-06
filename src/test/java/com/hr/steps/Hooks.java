@@ -1,5 +1,6 @@
 package com.hr.steps;
 
+import com.hr.bases.PageInitializer;
 import com.hr.utils.CommonMethods;
 
 import cucumber.api.Scenario;
@@ -15,6 +16,7 @@ public class Hooks extends CommonMethods{
 		System.out.println("=================================================");
 		
 		setUp();
+		PageInitializer.initiliazeAllPages();
 	}
 	
 	@After

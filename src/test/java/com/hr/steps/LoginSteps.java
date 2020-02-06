@@ -1,8 +1,5 @@
 package com.hr.steps;
 
-
-
-import com.hr.pages.LoginPageElements;
 import com.hr.utils.CommonMethods;
 import com.hr.utils.FileReader;
 
@@ -12,14 +9,11 @@ import cucumber.api.java.en.When;
 
 public class LoginSteps extends CommonMethods {
 	
-	LoginPageElements log;
-
 
 	@When("User enter valid username and password")
 	public void user_enter_valid_username_and_password() {
-		log = new LoginPageElements();
-	    sendText(log.username, FileReader.getProperty("username"));
-	    sendText(log.password, FileReader.getProperty("password"));
+	    sendText(login.username, FileReader.getProperty("username"));
+	    sendText(login.password, FileReader.getProperty("password"));
 	    
 	
 	    
@@ -27,7 +21,7 @@ public class LoginSteps extends CommonMethods {
 	
 	@When("User click on login button")
 	public void user_click_on_login_button() {
-	   log.loginBtn.click();
+	   login.loginBtn.click();
 	}
 
 	@Then("Dashboard should be opened")
