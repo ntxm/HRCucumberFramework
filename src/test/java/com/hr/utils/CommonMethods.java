@@ -12,6 +12,11 @@ public class CommonMethods extends PageInitializer {
 		js.executeScript("argument[0].click()", element);
 		
 	}
+	
+	public static void sendText(WebElement element, String value) {
+		element.clear();
+		element.sendKeys(value);
+	}
 		
 
 }
