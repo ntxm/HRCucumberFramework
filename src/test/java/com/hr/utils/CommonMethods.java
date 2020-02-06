@@ -1,5 +1,17 @@
 package com.hr.utils;
 
-public class CommonMethods {
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import com.hr.bases.PageInitializer;
+
+public class CommonMethods extends PageInitializer {
+	
+	public static void jsClick(WebElement element) {
+		JavascriptExecutor js =  (JavascriptExecutor)driver;
+		js.executeScript("argument[0].click()", element);
+		
+	}
+		
 
 }

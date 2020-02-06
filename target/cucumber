@@ -1,0 +1,99 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-02-06T02:47:53.237Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3301075573,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.startScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Login into system with valid credential",
+        "description": "",
+        "id": "login-page;login-into-system-with-valid-credential",
+        "after": [
+          {
+            "result": {
+              "duration": 83701054,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.endScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 182032669,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User enter valid username and password",
+            "match": {
+              "location": "LoginSteps.user_enter_valid_username_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2358524990,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User click on login button",
+            "match": {
+              "location": "LoginSteps.user_click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 133671,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Dashboard should be opened",
+            "match": {
+              "location": "LoginSteps.dashboard_should_be_opened()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          },
+          {
+            "name": "@inProgress"
+          }
+        ]
+      }
+    ],
+    "name": "Login Page",
+    "description": "",
+    "id": "login-page",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Login.feature",
+    "tags": [
+      {
+        "name": "@login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

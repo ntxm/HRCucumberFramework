@@ -1,14 +1,16 @@
 package com.hr.pages;
 
+import org.hamcrest.core.CombinableMatcher;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.hr.bases.BaseClass;
+import com.hr.utils.CommonMethods;
 
 
 
-public class DashboardPageElements {
+public class DashboardPageElements extends CommonMethods {
 	
 	@FindBy(linkText="Leave")
 	public WebElement leaveLink;
@@ -34,11 +36,26 @@ public class DashboardPageElements {
 	@FindBy(linkText = "Reports")
 	public WebElement reportsLink;
 	
+	@FindBy(linkText = "Performance")
+	public WebElement perfomanceLink;
+	
+	@FindBy(linkText = "Configure")
+	public WebElement configureLink;
+	
+	@FindBy(linkText = "KPIs")
+	public WebElement kpiLink;
+	
+	
 	
 	public DashboardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
 	
+	public void navigateToKPI() {
+		jsClick(perfomanceLink);
+		jsClick(configureLink);
+		jsClick(kpiLink);
+	}
 	
 
 }
