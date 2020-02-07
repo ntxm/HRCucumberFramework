@@ -22,7 +22,9 @@ public class Hooks extends CommonMethods{
 	@After
 	public void endScenario(Scenario scenario) {
 		
+		takeScreenshot(scenario.getName(), scenario.isFailed());
 		tearDown();
+		
 		System.out.println("=================================================");
 		System.out.println(scenario.getName() + " is ended!");
 		System.out.println("******** " + scenario.getStatus() + " ********");

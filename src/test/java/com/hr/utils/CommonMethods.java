@@ -1,6 +1,12 @@
 package com.hr.utils;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 
 import com.hr.bases.PageInitializer;
@@ -29,5 +35,22 @@ public class CommonMethods extends PageInitializer {
 		element.sendKeys(value);
 	}
 		
+	
+	public static void takeScreenshot(String scrName, boolean scenarioResult) {
+		File scr = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+				if(scenarioResult) {
+					FileUtils.copyFile(scr, new File("target/screenshots/failed/" + scrName + System.currentTimeMillis() + ".png"));
+				}else {
+					FileUtils.copyFile(scr, new File("target/screenshots/passed/" + scrName + System.currentTimeMillis() + ".png"));
+				}
+			
+			System.out.println("scr done");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
 
 }
