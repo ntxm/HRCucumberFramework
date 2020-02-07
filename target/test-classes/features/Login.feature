@@ -7,7 +7,7 @@ Scenario: Login into system with valid credential
 
 When User enter valid username and password
 And User click on login button
-Then Dashboard should be opened
+Then Should be opened "Dashboard" page
 
 
 

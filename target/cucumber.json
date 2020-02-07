@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-02-07T07:10:26.971Z",
+        "start_timestamp": "2020-02-07T07:25:01.219Z",
         "before": [
           {
             "result": {
-              "duration": 3444374936,
+              "duration": 3661543359,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 1433642043,
+              "duration": 1577909234,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 219155299,
+              "duration": 219058483,
               "status": "passed"
             },
             "line": 8,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 1978159438,
+              "duration": 2790602777,
               "status": "passed"
             },
             "line": 9,
@@ -59,13 +59,19 @@
           },
           {
             "result": {
-              "duration": 27451,
+              "duration": 31084540,
               "status": "passed"
             },
             "line": 10,
-            "name": "Dashboard should be opened",
+            "name": "Should be opened \"Dashboard\" page",
             "match": {
-              "location": "LoginSteps.dashboard_should_be_opened()"
+              "arguments": [
+                {
+                  "val": "\"Dashboard\"",
+                  "offset": 17
+                }
+              ],
+              "location": "LoginSteps.should_be_opened_page(String)"
             },
             "keyword": "Then "
           }

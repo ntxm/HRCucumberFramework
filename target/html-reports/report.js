@@ -46,11 +46,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Dashboard should be opened",
+  "name": "Should be opened \"Dashboard\" page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginSteps.dashboard_should_be_opened()"
+  "location": "LoginSteps.should_be_opened_page(String)"
 });
 formatter.result({
   "status": "passed"

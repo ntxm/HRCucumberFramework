@@ -1,6 +1,6 @@
 package com.hr.pages;
 
-import org.hamcrest.core.CombinableMatcher;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -44,6 +44,9 @@ public class DashboardPageElements extends CommonMethods {
 	
 	@FindBy(linkText = "KPIs")
 	public WebElement kpiLink;
+	
+	@FindBy(xpath = "//div[@class='head']/h1")
+	public WebElement headerOfDashboard;
 	
 	
 	

@@ -1,5 +1,7 @@
 package com.hr.steps;
 
+import org.junit.Assert;
+
 import com.hr.utils.CommonMethods;
 import com.hr.utils.FileReader;
 
@@ -24,9 +26,10 @@ public class LoginSteps extends CommonMethods {
 	   login.loginBtn.click();
 	}
 
-	@Then("Dashboard should be opened")
-	public void dashboard_should_be_opened() {
+	@Then("Should be opened {string} page")
+	public void should_be_opened_page(String title) {
 	    
+	    Assert.assertEquals("Header message NOT matched", title, dashboard.headerOfDashboard.getText());
 		
 	}
 
