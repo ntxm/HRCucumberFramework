@@ -36,6 +36,7 @@ public class CommonMethods extends PageInitializer {
 	}
 		
 	
+
 	public static void takeScreenshot(String scrName, boolean scenarioResult) {
 		File scr = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try {
@@ -50,7 +51,6 @@ public class CommonMethods extends PageInitializer {
 			e.printStackTrace();
 		}
 	}
-
 
 
 }
