@@ -21,7 +21,7 @@ public class Hooks extends CommonMethods{
 	
 	@After
 	public void endScenario(Scenario scenario) {
-		
+		takeScreenshot();
 		tearDown();
 		System.out.println("=================================================");
 		System.out.println(scenario.getName() + " is ended!");
