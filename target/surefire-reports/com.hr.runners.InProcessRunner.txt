@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.hr.runners.InProcessRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.315 s - in com.hr.runners.InProcessRunner
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.528 s - in com.hr.runners.InProcessRunner
